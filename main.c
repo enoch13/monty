@@ -1,4 +1,5 @@
 #include "monty.h"
+#include <stdio.h>
 
 /**
  * Globale data - collection of data instance
@@ -26,7 +27,7 @@ int main(int ac, char **av)
 	data.fp = fopen(data.filename, "r");
 	if (data.fp == NULL)
 		push_error(14);
-	while (getline(&data.line, &length, data.fp) > 0)
+	while ((n_read = getline(&data.line, &length, data.fp)) > 0)
 	{
 		if (*data.line == '\n')
 			continue;
