@@ -1,6 +1,4 @@
 #include "monty.h"
-#include <stdio.h>
-#include <string.h>
 
 /**
  * Globale data - collection of data instance
